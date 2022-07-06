@@ -1,0 +1,25 @@
+* requirements
+- [X] must use at least two servide-side APIs
+- [X] must use a css framework other than bootstrap
+      https://tailwindcss.com/docs/
+- [X] must use client-side storage for persistent data
+- [X] must have a polished, mobile-first ui
+- [X] must meet good quality coding standards
+- [X] Does NOT use alerts, confirms, or prompts (look into modals).
+- [X] Must be deployed to GitHub Pages
+- [X] Must be interactive (Ie accept and respond to user input)
+
+* todays checklist
+- [X] project title and description
+      The Druken RFC - pick a random RFC to get information about every day.
+- [X] repo configured
+- [-] user story
+      As I user:
+      I WANT to broaden my developer knowledge by researching a random RFC every day.
+- [X] wireframewe or sketch of the design
+      close enough...
+- [X] API's identified
+  - RFC (url: xml scrapping https://www.rfc-editor.org/rfc/rfc-index.xml)
+  - wikipedia (url: https://www.mediawiki.org/wiki/API:Main_page)
+  - github (url: api.github.com)
+- [-] issues created and assigned
