@@ -13,7 +13,7 @@
 - [X] project title and description
       The Druken RFC - pick a random RFC to get information about every day.
 - [X] repo configured
-- [-] user story
+- [X] user story
       As I user:
       I WANT to broaden my developer knowledge by researching a random RFC every day.
 - [X] wireframewe or sketch of the design
@@ -22,4 +22,5 @@
   - RFC (url: xml scrapping https://www.rfc-editor.org/rfc/rfc-index.xml)
   - wikipedia (url: https://www.mediawiki.org/wiki/API:Main_page)
   - github (url: api.github.com)
-- [-] issues created and assigned
+- [ ] issues created and assigned
+      (remember, someone needs to update the README)
