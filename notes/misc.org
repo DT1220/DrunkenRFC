@@ -24,3 +24,12 @@
   - github (url: api.github.com)
 - [ ] issues created and assigned
       (remember, someone needs to update the README)
+
+* presentation requirements
+- [ ] elvator pitch: one minute description of your app
+- [ ] concept: what is your user story? what was your motivation for development?
+- [ ] process: What were the technologies used? How were tasks and roles broken down and assigned?
+               what challenges did you encounter? what were your sccesses?
+- [ ] demo: show your stuff!
+- [ ] directions for future development
+- [ ] links to the deployed applicationand the GitHub repo
