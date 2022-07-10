@@ -12,26 +12,18 @@
 </head>
 
 <body class="flex flex-col h-screen">
-    <header class="text-white bg-gray-700 p-5 flex justify-between">
-        <button id="historyButton" class="hover:bg-sky-700 border-2 p-2">
+    <header class="text-white bg-gray-700 p-5 grid grid-cols-3 gap-4">
+        <button id="historyButton" class="hover:bg-sky-700 border-2 p-2 justify-self-start">
             History
         </button>
-        <h1 class="p-2 text-lg">
+        <h1 class="p-2 text-lg text-center grow">
             The Drunken RFC
         </h1>
-        <!-- an empty div to fudge centering the title -->
-        <div></div>
     </header>
     <main class="bg-slate-300 flex flex-col justiy-center align-center h-full">
         <!-- section for rfc info -->
-        <section id="rfcContainer" class="border-4 border-gray-700 m-4 h-full">
+        <section id="rfcContainer" class="border-4 border-gray-700 m-4">
             <!-- to be dyn created by code in api-rfc.js-->
-            todo
-        </section>
-        <!-- section for wikipedia info -->
-        <section id="wikipediaContainer" class="border-4 border-gray-700 m-4 h-full">
-            <!-- to be dyn created by code in api-wikipedia.js-->
-            todo
         </section>
         <!-- section for github info -->
         <section id="githubContainer" class="border-4 border-gray-700 m-4 h-full">
