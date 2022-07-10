@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<body>
-    <!-- todo -->
+
+<body class="flex flex-col h-screen bg-slate-300">
+    <header class="text-white bg-gray-700 p-5 grid grid-cols-3 gap-4">
+        <button id="returnButton" class="hover:bg-sky-700 border-2 p-2 justify-self-start">
+            Return
+        </button>
+        <h1 class="p-2 text-lg text-center">
+            History
+        </h1>
+    </header>
+    <main class="flex flex-col justiy-center align-center h-full">
+            <ol id="historyList" class="list-none mx-auto">
+                <!-- dyn elements of history go here -->
+            </ol>
+    </main>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/saveload.js"></script>
