@@ -19,13 +19,15 @@ var displayHistory = function (parentEl) {
 };
 
 // button handler to return to start page
-// todo....
+var returnButtonHandler = function () {
+    location.assign("./index.html")
+};
+
 
 // main function
 var main = function () {
     // register handlers
-    // todo....
-    console.log("todo: main");
+    returnButtonEl.on("click", returnButtonHandler);
     // function calls to load/display conetent
     displayHistory(historyListEl);
 };
