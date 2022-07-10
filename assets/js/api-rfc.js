@@ -75,11 +75,52 @@ var getRFC = async function () {
 };
 
 
-// TODO: flesh out the function below to dyn create elements under parentEl, 
-// the function should return the promise chain built off your fetch call
-// displayGithub :: (parentEl : Jquery-Element) && (rfcNumber: Int) -> Promise
-var displayRFC = function (parentEl, rfcNumber) {
-    console.log("todo: displayRFC");
-    // don't return this dummy promise...
-    return new Promise((resolve, reject) => {"dummy"});
+var displayRFC = async function (parentEl, rfcNumber) {
+    var rfcDataUrl = function (rfcNumber) {
+        return datatracker + "/doc/rfc" + rfcNumber + "/doc.json"
+    };
+    var rfcPageUrl = function (rfcNumber) {
+        return "https://rfc-editor.org/rfc/rfc" + rfcNumber + ".html";
+    };
+
+    var rfcDisplay = fetch(rfcDataUrl(rfcNumber))
+        .then(response => {
+            return response.json();
+        })
+        .then(json => {
+            return {
+                number: rfcNumber,
+                title: json.title,
+                abstract: json.abstract,
+                url: rfcPageUrl(rfcNumber)
+            }
+        }).then(rfcData => {
+            // elements
+            var rfcContainerEl = $("<div>")
+                .addClass("h-full flex flex-col group cursor-pointer");
+            var rfcHeaderEl = $("<h2>")
+                .addClass("bg-slate-500 p-2 text-center text-white group-hover:bg-slate-600")
+                .text("RFC " + rfcData.number);
+            var rfcContentEl = $("<div>")
+                .addClass("h-full group-hover:bg-slate-400");
+            var rfcTitleEl = $("<h3>")
+                .addClass("text-center p-2 font-bold")
+                .text(rfcData.title);
+            var rfcAbstractEl = $("<p>")
+                .addClass("text-center px-3 pb-2")
+                .text(rfcData.abstract);
+
+            // add handler
+            rfcContainerEl.on("click", () => {
+                window.open(rfcData.url, "_blank")
+            })
+
+            // add to parents
+            rfcContentEl.append(rfcTitleEl, rfcAbstractEl);
+            rfcContainerEl.append(rfcHeaderEl, rfcContentEl);
+            parentEl.empty();
+            parentEl.append(rfcContainerEl);
+        })
+
+    return rfcDisplay;
 };
