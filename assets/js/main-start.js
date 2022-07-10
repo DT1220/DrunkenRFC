@@ -24,12 +24,12 @@ var tryDisplaying = async function (displayFunction, parentEl, rfcNumber) {
 };
 
 // main
-var main = function () {
+var main = async function () {
     // register handlers
     // todo for button....
 
     // get random rfc number
-    var rfcNumber = getRFC();
+        var rfcNumber = await getRFC();
 
     // display info
     tryDisplaying(displayRFC, rfcEl, rfcNumber);
