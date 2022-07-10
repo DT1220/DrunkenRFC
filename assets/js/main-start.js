@@ -8,6 +8,14 @@ var historyButtonEl = $("#historyButton");
 // button handler function 
 // todo....
 
+var displayError = function (parentEl, message) {
+    parentEl.empty();
+    parentEl.append(
+        $("<div>")
+            .addClass("h-full bg-rose-500 flex items-center justify-center")
+            .text("Error: " + message));
+};
+
 // generic error handling
 var tryDisplaying = async function (displayFunction, parentEl, rfcNumber) {
     try {
