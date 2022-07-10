@@ -12,15 +12,13 @@
 </head>
 
 <body class="flex flex-col h-screen">
-    <header class="text-white bg-gray-700 p-5 flex justify-between">
-        <button id="historyButton" class="hover:bg-sky-700 border-2 p-2">
+    <header class="text-white bg-gray-700 p-5 grid grid-cols-3 gap-4">
+        <button id="historyButton" class="hover:bg-sky-700 border-2 p-2 justify-self-start">
             History
         </button>
-        <h1 class="p-2 text-lg">
+        <h1 class="p-2 text-lg text-center grow">
             The Drunken RFC
         </h1>
-        <!-- an empty div to fudge centering the title -->
-        <div></div>
     </header>
     <main class="bg-slate-300 flex flex-col justiy-center align-center h-full">
         <!-- section for rfc info -->
