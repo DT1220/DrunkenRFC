@@ -23,11 +23,7 @@ var tryDisplaying = async function (displayFunction, parentEl, rfcNumber) {
     }
     catch (error) {
         console.log("DISPLAY ERROR in " + displayFunction.name + ": ", error);
-        parentEl.empty();
-        parentEl.append(
-            $("<div>")
-                .addClass("h-full bg-rose-500 flex items-center justify-center")
-                .text("Error: Cannot Display"));
+        displayError(parentEl, "Cannot Display");
     }
 };
 
