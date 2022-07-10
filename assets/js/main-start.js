@@ -3,6 +3,7 @@ var rfcEl = $("#rfcContainer");
 var wikipediaEl = $("#wikipediaContainer");
 var githubEl = $("#githubContainer");
 var historyButtonEl = $("#historyButton");
+var mainEl = $("main");
 
 
 // button handler function 
@@ -32,13 +33,19 @@ var main = async function () {
     // register handlers
     // todo for button....
 
-    // get random rfc number
+    try {
+        // get random rfc number
         var rfcNumber = await getRFC();
 
-    // display info
-    tryDisplaying(displayRFC, rfcEl, rfcNumber);
-    tryDisplaying(displayWikipedia, wikipediaEl, rfcNumber);
-    tryDisplaying(displayGithub, githubEl, rfcNumber);
+        // display info
+        tryDisplaying(displayRFC, rfcEl, rfcNumber);
+        tryDisplaying(displayWikipedia, wikipediaEl, rfcNumber);
+        tryDisplaying(displayGithub, githubEl, rfcNumber);
+    }
+    catch (error) {
+        console.log("SETUP ERROR: ", error);
+        displayError(mainEl, "Cannot Get RFC Information");
+    }
 };
 
 // start
