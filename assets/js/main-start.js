@@ -7,7 +7,13 @@ var mainEl = $("main");
 
 
 // button handler function 
-// todo....
+// define the handler function
+var buttonHandler = function() {
+    
+    location.assign("./history.html"); 
+};
+
+historyButtonEl.on("click", buttonHandler);
 
 var displayError = function (parentEl, message) {
     parentEl.empty();
