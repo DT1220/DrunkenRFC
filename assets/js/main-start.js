@@ -1,6 +1,5 @@
 // elements
 var rfcEl = $("#rfcContainer");
-var wikipediaEl = $("#wikipediaContainer");
 var githubEl = $("#githubContainer");
 var historyButtonEl = $("#historyButton");
 var mainEl = $("main");
@@ -45,7 +44,6 @@ var main = async function () {
 
         // display info
         tryDisplaying(displayRFC, rfcEl, rfcNumber);
-        tryDisplaying(displayWikipedia, wikipediaEl, rfcNumber);
         tryDisplaying(displayGithub, githubEl, rfcNumber);
     }
     catch (error) {
