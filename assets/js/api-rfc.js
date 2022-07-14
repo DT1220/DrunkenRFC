@@ -17,10 +17,17 @@ var getRFC = async function () {
 
     var rfcDocUrl = function (docPath) {
         return datatracker + docPath;
-    }
+    };
 
+    var paramRFC = new URLSearchParams(location.search);
+    var paramRFCnumber = parseInt(paramRFC.get("rfc"));
+
+    // if there is an rfc param, use that
+    if (paramRFCnumber) {
+        return paramRFCnumber;
+    }
     // if we already have an RFC for today, return that, otherwise go get one.
-    if (todayRFC && todayFormated === todayRFC.date) {
+    else if (todayRFC && todayFormated === todayRFC.date) {
         return todayRFC.number;
     }
     else {
