@@ -11,39 +11,29 @@
     <link rel="stylesheet" href="./assets/css/style.css" /> 
 </head>
 
-<body class="flex flex-col h-screen">
-    <header class="text-white bg-gray-700 p-5 flex justify-between">
-        <button id="historyButton" class="hover:bg-sky-700 border-2 p-2">
+<body class="flex flex-col h-screen bg-slate-300">
+    <header class="text-white bg-gray-700 p-5 grid grid-cols-3">
+        <button id="historyButton" class="hover:bg-sky-700 border-2 p-2 justify-self-start">
             History
         </button>
-        <h1 class="p-2 text-lg">
+        <h1 class="p-2 text-lg sm:text-center grow col-span-2 sm:col-span-1">
             The Drunken RFC
         </h1>
-        <!-- an empty div to fudge centering the title -->
-        <div></div>
     </header>
-    <main class="bg-slate-300 flex flex-col justiy-center align-center h-full">
+    <main class="bg-slate-300 flex flex-col justiy-center align-center">
         <!-- section for rfc info -->
-        <section id="rfcContainer" class="border-4 border-gray-700 m-4 h-full">
+        <section id="rfcContainer" class="border-4 border-gray-700 m-4 max-w-screen-lg lg:mx-auto">
             <!-- to be dyn created by code in api-rfc.js-->
-            todo
-        </section>
-        <!-- section for wikipedia info -->
-        <section id="wikipediaContainer" class="border-4 border-gray-700 m-4 h-full">
-            <!-- to be dyn created by code in api-wikipedia.js-->
-            todo
         </section>
         <!-- section for github info -->
-        <section id="githubContainer" class="border-4 border-gray-700 m-4 h-full">
+        <section id="githubContainer" class="border-4 border-gray-700 m-4 mx-w-screen-lg lg:mx-auto">
             <!-- to be dyn created by code in api-github.js-->
-            todo
         </section>
     </main>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/saveload.js"></script>
     <script src="./assets/js/api-rfc.js"></script>
-    <script src="./assets/js/api-wikipedia.js"></script>
     <script src="./assets/js/api-github.js"></script>
     <script src="./assets/js/main-start.js"></script>
 </body>
