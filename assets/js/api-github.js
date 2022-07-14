@@ -6,7 +6,6 @@ var displayGithub = function (parentEl, rfcNumber) {
             return response.json();
         })
         .then(function (json) {
-            console.log(json);
             var data = [];
             for (var i = 0; i < json.items.length; i++) {
                 data.push({
