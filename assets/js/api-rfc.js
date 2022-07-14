@@ -23,7 +23,7 @@ var getRFC = async function () {
     var paramRFCnumber = parseInt(paramRFC.get("rfc"));
 
     // if there is an rfc param, use that
-    if (paramRFCnumber) {
+    if (paramRFCnumber && todayFormated === todayRFC.date) {
         return paramRFCnumber;
     }
     // if we already have an RFC for today, return that, otherwise go get one.
