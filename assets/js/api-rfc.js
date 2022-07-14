@@ -4,7 +4,7 @@ var getRFC = async function () {
     var history = load();
     var todayRFC = history[0];
     var today = new Date();
-    var todayFormated = today.getMonth() + "/" + today.getDay() + "/" + today.getFullYear();
+    var todayFormated = (today.getMonth() + 1) + "/" + today.getDate() + "/" + today.getFullYear();
 
     var rfcListUrl = function (offset) {
         return datatracker + "/api/v1/doc/docevent/" +
