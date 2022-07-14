@@ -6,10 +6,12 @@ var displayGithub = function (parentEl, rfcNumber) {
             return response.json();
         })
         .then(function (json) {
+            console.log(json);
             var data = [];
             for (var i = 0; i < json.items.length; i++) {
                 data.push({
                     url: json.items[i].html_url,
+                    owner: json.items[i].owner.login,
                     name: json.items[i].name
 
                 });
@@ -39,7 +41,7 @@ var displayGithub = function (parentEl, rfcNumber) {
                     .attr("href", data.repos[i].url)
                     .attr("target", target = "_blank")
                     //displays onto the webpage
-                    .text(data.repos[i].name);
+                    .text(data.repos[i].owner + "/" + data.repos[i].name);
                 githubContainerEl.append(aEl);
             }
             if (data.repos.length === 0) {
