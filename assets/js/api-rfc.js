@@ -24,7 +24,6 @@ var getRFC = async function () {
 
     // if there is an rfc param, use that
     if (paramRFCnumber && todayRFC && todayFormated === todayRFC.date) {
-        console.log('here');
         return paramRFCnumber;
     }
     // if there is an rfc param, but it is a new day, reload the page to clear out the param and continue
