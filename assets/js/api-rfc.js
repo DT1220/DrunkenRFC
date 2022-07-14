@@ -23,8 +23,13 @@ var getRFC = async function () {
     var paramRFCnumber = parseInt(paramRFC.get("rfc"));
 
     // if there is an rfc param, use that
-    if (paramRFCnumber && todayFormated === todayRFC.date) {
+    if (paramRFCnumber && todayRFC && todayFormated === todayRFC.date) {
+        console.log('here');
         return paramRFCnumber;
+    }
+    // if there is an rfc param, but it is a new day, reload the page to clear out the param and continue
+    else if (paramRFCnumber && todayRFC && todayFormated !== todayRFC.date) {
+        location.assign("./index.html");
     }
     // if we already have an RFC for today, return that, otherwise go get one.
     else if (todayRFC && todayFormated === todayRFC.date) {
