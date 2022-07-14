@@ -1,5 +1,4 @@
 var displayGithub = function (parentEl, rfcNumber) {
-    var rfcNumber = 4122;
     var apiURL = "https://api.github.com/search/repositories?q=rfc" + rfcNumber + "&per_page=5";
 
     return fetch(apiURL)
