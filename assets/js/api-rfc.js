@@ -17,10 +17,21 @@ var getRFC = async function () {
 
     var rfcDocUrl = function (docPath) {
         return datatracker + docPath;
-    }
+    };
 
+    var paramRFC = new URLSearchParams(location.search);
+    var paramRFCnumber = parseInt(paramRFC.get("rfc"));
+
+    // if there is an rfc param, use that
+    if (paramRFCnumber && todayRFC && todayFormated === todayRFC.date) {
+        return paramRFCnumber;
+    }
+    // if there is an rfc param, but it is a new day, reload the page to clear out the param and continue
+    else if (paramRFCnumber && todayRFC && todayFormated !== todayRFC.date) {
+        location.assign("./index.html");
+    }
     // if we already have an RFC for today, return that, otherwise go get one.
-    if (todayRFC && todayFormated === todayRFC.date) {
+    else if (todayRFC && todayFormated === todayRFC.date) {
         return todayRFC.number;
     }
     else {
